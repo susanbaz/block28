@@ -8,18 +8,25 @@ import Home from './component/Home';
 function App() {
   return (
     <>
-      <div id="main-section">
-        <Routes>
-          <Route path="/blue" element={<Blue />} />
-          <Route path="/red" element={<Red />} />
-          <Route path="/" element={<Home />} />
-        </Routes>
-
+      <div id="container">
         <h1>Hello React Router!</h1>
         <div id="navbar">
-          <Link to="/blue">Blue</Link>
-          <Link to="/red">Red</Link>
-          <Link to="/">Home</Link>
+          <Link to="/blue" className="blue">
+            Blue
+          </Link>
+          <Link to="/red" className="red">
+            Red
+          </Link>
+          <Link to="/" className="home">
+            Home
+          </Link>
+        </div>
+        <div id="main-section">
+          <Routes>
+            <Route path="/blue" element={<Blue />} />
+            <Route path="/red" element={<Red />} />
+            <Route path="/" element={<Home />} />
+          </Routes>
         </div>
       </div>
       <p className="read-the-docs">
